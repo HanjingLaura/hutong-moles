@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>胡同地鼠 · Hutong Moles</title><link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div class="hardware"><button id="connect">连接 Uno</button><p id="serial-status" role="status"></p></div></header>
+  <main>
+    <div class="title"><div><p class="english">HUTONG MOLES</p><h1>胡同地鼠</h1></div></div>
+    <section id="selection" aria-label="选择角色">
+      <div id="people" class="people" aria-label="选择角色"></div>
+      <div class="selection-actions"><div><button id="all">全选</button><button id="clear">清空</button></div><button id="start" class="primary" disabled>开始 · 60 秒 →</button></div>
+      <p id="asset-status" role="status" hidden></p>
+    </section>
+    <section id="play" hidden aria-label="打地鼠游戏">
+      <div class="scoreboard"><div>分数<strong id="score">0</strong></div><div>剩余时间<strong><span id="time">60</span><small> 秒</small></strong></div><div>连击<strong id="combo">0</strong></div><div>本机最高<strong id="best">0</strong></div></div>
+      <div class="wall"><div id="holes" class="holes"></div><div id="countdown" role="status" hidden></div></div>
+    </section>
+    <section id="result" hidden aria-labelledby="result-title">
+      <p class="english">TIME'S UP</p><h2 id="result-title">下班，收工！</h2>
+      <p class="result-score"><span id="final-score">0</span><small> 分</small></p>
+      <p id="record" role="status"></p><p class="muted">本局被你打中最多次的人</p>
+      <div id="leaders"></div><div class="result-actions"><button id="again" class="primary">原班人马再来</button><button id="change">换人再来</button></div>
+    </section>
+    <footer><span id="saved-best">本机最高 0 分</span></footer>
+  </main><script type="module" src="app.js"></script>
+</body></html>
