@@ -1,0 +1,12 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/", "destination": "/web/index.html" },
+    { "source": "/dishu/", "destination": "/web/index.html" },
+    { "source": "/dishu/:path*", "destination": "/web/:path*" }
+  ],
+  "headers": [
+    { "source": "/(.*)\\.mjs", "headers": [{ "key": "Content-Type", "value": "text/javascript; charset=utf-8" }] }
+  ]
+}
